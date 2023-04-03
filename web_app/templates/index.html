@@ -1,0 +1,110 @@
+<style>
+    .flex-container{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 5%;
+
+    }
+    
+    .flex-container > div{
+        display: flex;
+        width: 25%;
+        height: 20vh;
+        align-items: center;
+        justify-content: center;
+        flex-wrap : wrap;
+        background-color: #feeee2;
+        padding: 2%;
+        border-radius: 25px;
+        box-shadow: 1px 3px 8px 0px #888888;
+    }
+    
+    .widget_image{
+        width:100%;
+        height:100%;
+        display:block;
+    }
+    
+    .button {
+      width: 100%;
+      background-color: #FF560B;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 2s;
+      cursor: pointer;
+    }
+
+    .button1 {
+      margin-top: 5%;
+      height: 80%;
+      border: none;
+      width: 70%;
+      background-color: #FF560B; 
+      color: white; 
+      border-radius: 10px;
+
+    }
+
+    .button1:hover {
+      background-color: #ED2D05;
+    }
+    
+    .image_container {
+        height: 70%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .button_container{
+        height: 30%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+</style>
+
+
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+
+{% block body %}
+    <div class="flex-container">
+        <div>
+            <div class="image_container">
+                <img height="100%" src="{{url_for('static', filename='images/add_produce.png')}}" align="middle" />            
+            </div>
+            <div class="button_container">
+                    <button onclick="window.location.href='{{ url_for('new_product') }}'" class="button1"> NEW PRODUCT </button> 
+            </div>
+        </div>
+
+        <div>
+            <div>
+                hello
+            </div>
+        </div>
+        
+        <div>
+            <div>
+                hello
+            </div>
+        </div>
+        
+
+    </div>
+{% endblock %}
